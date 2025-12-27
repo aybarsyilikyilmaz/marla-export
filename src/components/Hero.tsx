@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { useLanguage } from "../context/useLanguage";
 import "./Hero.css";
 
@@ -29,13 +30,13 @@ export default function Hero() {
         <p>{t("home.heroDesc")}</p>
 
         <div className="hero-actions">
-          <a className="btn primary" href="/how-it-works">
+          <NavLink to="/how-it-works" className="btn primary">
             {t("home.btnHow")}
-          </a>
+          </NavLink>
 
-          <a className="btn outline" href="/contact">
+          <NavLink to="/contact" className="btn outline">
             {t("home.btnContact")}
-          </a>
+          </NavLink>
         </div>
       </div>
     </section>
