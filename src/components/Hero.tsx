@@ -29,11 +29,11 @@ export default function Hero() {
         <p>{t("home.heroDesc")}</p>
 
         <div className="hero-actions">
-          <a className="btn primary" href="#/how-it-works">
+          <a className="btn primary" href="/how-it-works">
             {t("home.btnHow")}
           </a>
 
-          <a className="btn outline" href="#/contact">
+          <a className="btn outline" href="/contact">
             {t("home.btnContact")}
           </a>
         </div>
