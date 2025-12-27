@@ -1,0 +1,197 @@
+/* ===============================
+   SECTION 3 – CLEAN STATS
+================================ */
+
+.section3 {
+    padding: 140px 6vw;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 90px;
+  
+    background: radial-gradient(
+        ellipse at left,
+        rgba(212, 175, 55, 0.06),
+        transparent 60%
+      ),
+      linear-gradient(180deg, #000 0%, #050505 100%);
+  }
+  
+  /* -------------------------------
+     LEFT SIDE
+  -------------------------------- */
+  
+  .section3-left {
+    max-width: 520px;
+  }
+  
+  .section3-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d4af37;
+    line-height: 1.2;
+  }
+  
+  /* -------------------------------
+     RIGHT SIDE – STATS
+  -------------------------------- */
+  
+  .section3-right {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+  }
+  
+  /* -------------------------------
+     STAT ITEM (NO BOX)
+  -------------------------------- */
+  
+  .stat-box {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* subtle separator line */
+  .stat-box:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-top: 26px;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(212, 175, 55, 0.6),
+      transparent
+    );
+  }
+  
+  /* -------------------------------
+     VALUE
+  -------------------------------- */
+  
+  .stat-value {
+    display: block;
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #d4af37;
+    letter-spacing: -0.5px;
+    line-height: 1;
+  }
+  
+  /* -------------------------------
+     LABEL
+  -------------------------------- */
+  
+  .stat-label {
+    margin-top: 6px;
+    font-size: 1rem;
+    color: #e6e6e6;
+    letter-spacing: 0.4px;
+  }
+  
+  /* ===============================
+     TABLET
+  ================================ */
+  
+  @media (max-width: 1100px) {
+    .section3 {
+      grid-template-columns: 1fr;
+      gap: 70px;
+      padding: 120px 6vw;
+    }
+  
+    .section3-title {
+      font-size: 2.6rem;
+    }
+  
+    .section3-right {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+  
+    .stat-box {
+      flex: 1 1 calc(50% - 25px);
+    }
+  
+    .stat-box::after {
+      display: none;
+    }
+  }
+  
+  /* ===============================
+     MOBILE
+  ================================ */
+  
+  @media (max-width: 600px) {
+    .section3 {
+      padding: 90px 5vw;
+      text-align: center;
+    }
+  
+    .section3-title {
+      font-size: 2.1rem;
+    }
+  
+    .section3-right {
+      flex-direction: column;
+      gap: 36px;
+    }
+  
+    .stat-value {
+      font-size: 2.8rem;
+    }
+  
+    .stat-label {
+      font-size: 0.95rem;
+    }
+  
+    .stat-box::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  /* -------------------------------
+   GOLD GLOW PULSE
+-------------------------------- */
+
+.glow {
+    text-shadow:
+      0 0 8px rgba(212, 175, 55, 0.35),
+      0 0 18px rgba(212, 175, 55, 0.25);
+    animation: goldPulse 2.8s ease-in-out infinite;
+  }
+  
+  @keyframes goldPulse {
+    0%, 100% {
+      text-shadow:
+        0 0 8px rgba(212, 175, 55, 0.35),
+        0 0 18px rgba(212, 175, 55, 0.25);
+    }
+    50% {
+      text-shadow:
+        0 0 14px rgba(212, 175, 55, 0.55),
+        0 0 30px rgba(212, 175, 55, 0.45);
+    }
+  }
+  /* ===============================
+   GOLD DIVIDER
+================================ */
+
+.gold-divider {
+    width: 100%;
+    height: 1px;
+    margin: 120px 0 80px;
+  
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 175, 55, 0.6),
+      transparent
+    );
+  }
+  
+  

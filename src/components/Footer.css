@@ -1,0 +1,258 @@
+/* ===============================
+   FOOTER – PREMIUM BLACK & GOLD
+================================ */
+
+.footer {
+  background: linear-gradient(
+    180deg,
+    #000 0%,
+    #050505 60%,
+    #000 100%
+  );
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 90px 6vw 50px;
+  color: #e6e6e6;
+  font-size: 0.95rem;
+}
+
+/* -------------------------------
+   INNER GRID
+-------------------------------- */
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 70px;
+  align-items: flex-start;
+}
+
+/* ===============================
+   BRAND
+================================ */
+
+.footer-brand {
+  max-width: 380px;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #d4af37;
+  margin-bottom: 18px;
+}
+
+.footer-slogan {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* ===============================
+   LINKS
+================================ */
+
+.footer-links h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  position: relative;
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+/* underline hover animation */
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(90deg, #d4af37, #b8962e);
+  transition: width 0.35s ease;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   CONTACT INFO
+================================ */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-contact a {
+  color: #d4af37;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-contact a:hover {
+  opacity: 0.8;
+}
+
+.footer-contact span {
+  font-size: 0.92rem;
+  color: #cccccc;
+}
+
+/* ===============================
+   BOTTOM BAR
+================================ */
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.85rem;
+  letter-spacing: 0.4px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-dev a {
+  color: #d4af37;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* underline animation */
+.footer-dev a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(90deg, #d4af37, #b8962e);
+  transition: width 0.4s ease;
+}
+
+.footer-dev a:hover::after {
+  width: 100%;
+}
+
+.footer-dev a:hover {
+  color: #f1d67a;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+
+.footer-bottom a:hover {
+  color: #f1d67a;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 70px 6vw 40px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+}
+
+/* ===============================
+   MOBILE – VERY CLEAN
+================================ */
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 6vw 35px;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-links,
+  .footer-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-slogan {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-links a::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
+

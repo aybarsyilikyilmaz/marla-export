@@ -1,0 +1,188 @@
+/* ===============================
+   CHAIRMAN – PREMIUM LAYOUT
+================================ */
+
+.chairman {
+    padding: 140px 6vw 160px;
+    background:
+      radial-gradient(
+        ellipse at top left,
+        rgba(212, 175, 55, 0.12),
+        transparent 55%
+      ),
+      linear-gradient(180deg, #000 0%, #050505 100%);
+    color: #fff;
+  }
+  
+  /* GRID */
+  .chairman-container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+  }
+  
+  /* -------------------------------
+     TEXT
+  -------------------------------- */
+  
+  .chairman-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 44px;
+  }
+  
+  .chairman-text p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #e6e6e6;
+    margin-bottom: 24px;
+  }
+  
+  /* CLOSING */
+  .chairman-closing {
+    margin-top: 36px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(212, 175, 55, 0.4);
+    color: #f0f0f0;
+  }
+  
+  /* SIGNATURE */
+  .chairman-signature {
+    margin-top: 40px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #d4af37;
+    letter-spacing: 0.4px;
+  }
+  
+  /* -------------------------------
+     IMAGE
+  -------------------------------- */
+  
+  /* -------------------------------
+   IMAGE – NO BOX, HERO STYLE
+-------------------------------- */
+
+.chairman-image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+    transform: none;
+  }
+  
+
+  
+  /* soft vignette glow */
+  .chairman-image::after {
+    content: "";
+    position: absolute;
+    inset: -60px -40px -60px -40px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0,0,0,0) 30%,
+      rgba(0,0,0,0.75) 70%
+    );
+    pointer-events: none;
+  }
+  
+  .chairman-image img {
+    transform: none !important;
+    transition: none;
+  
+    width: 100%;
+    max-width: 520px;
+  
+    filter: grayscale(100%) contrast(1.15);
+    box-shadow: 0 60px 120px rgba(0,0,0,0.85);
+  }
+  
+  /* subtle hover */
+  .chairman-image img:hover {
+    transform: translateY(-6px);
+    filter: grayscale(85%) contrast(1.1);
+  }
+  
+  /* -------------------------------
+     ANIMATIONS
+  -------------------------------- */
+  
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: fadeUp 0.9s ease forwards;
+  }
+  
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.35s; }
+  .delay-3 { animation-delay: 0.5s; }
+  .delay-4 { animation-delay: 0.65s; }
+  .delay-5 { animation-delay: 0.8s; }
+  .delay-6 { animation-delay: 0.95s; }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+ 
+
+
+
+    @media (max-width: 1024px) {
+
+        .chairman-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        /* FOTOĞRAF */
+        .chairman-image {
+          order: -1;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 24px;
+          max-height: 280px;   /* 👈 YÜKSEKLİK SINIRI */
+          overflow: hidden;   /* 👈 TAŞMA ENGEL */
+        }
+      
+        .chairman-image img {
+            max-width: 100%;
+            height: auto;
+          
+            border-radius: 18px; /* kareliği kırar */
+            
+            /* çok soft, premium shadow */
+            box-shadow:
+              0 10px 30px rgba(0, 0, 0, 0.55),
+              0 0 40px rgba(212, 175, 55, 0.15);
+          
+            /* siyah-beyaz fotoğraf daha soft dursun */
+            filter: contrast(1.05) brightness(0.95);
+          
+            transition: filter 0.4s ease, box-shadow 0.4s ease;
+          }
+          
+      
+        /* YAZI */
+        .chairman-text {
+          width: 100%;
+          text-align: left;
+        }
+        .chairman-image img:hover {
+            filter: contrast(1.1) brightness(1);
+            box-shadow:
+              0 15px 45px rgba(0, 0, 0, 0.65),
+              0 0 55px rgba(212, 175, 55, 0.25);
+          }
+           }
+      
+  

@@ -1,0 +1,138 @@
+/* ===============================
+   POLICIES – PREMIUM
+================================ */
+
+.policies {
+    padding: 120px 6vw 140px;
+    background: radial-gradient(
+        ellipse at top,
+        rgba(212, 175, 55, 0.08),
+        transparent 60%
+      ),
+      linear-gradient(180deg, #000 0%, #050505 100%);
+    color: #fff;
+  }
+  
+  /* -------------------------------
+     TITLE
+  -------------------------------- */
+  
+  .policies-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin-bottom: 70px;
+  }
+  
+  /* -------------------------------
+     LIST
+  -------------------------------- */
+  
+  .policies-list {
+    max-width: 1000px;
+  }
+  
+  /* -------------------------------
+     ITEM
+  -------------------------------- */
+  
+  .policy-item {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 70px;
+  }
+  
+  .policy-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #d4af37, transparent);
+  }
+  
+  .policy-item h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+  
+  .policy-item p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #dcdcdc;
+    max-width: 820px;
+  }
+  
+  /* -------------------------------
+     SIGNATURE
+  -------------------------------- */
+  
+  .policies-signature {
+    margin-top: 80px;
+    font-size: 0.95rem;
+    color: #d4af37;
+    border-top: 1px solid rgba(212, 175, 55, 0.35);
+    padding-top: 26px;
+    max-width: 600px;
+  }
+  
+  /* -------------------------------
+     FADE-UP ANIMATION
+  -------------------------------- */
+  
+  .fade-up {
+    opacity: 0;
+    transform: translateY(22px);
+    animation: fadeUp 0.9s ease forwards;
+  }
+  
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.35s; }
+  .delay-3 { animation-delay: 0.5s; }
+  .delay-4 { animation-delay: 0.65s; }
+  .delay-5 { animation-delay: 0.8s; }
+  .delay-6 { animation-delay: 0.95s; }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ===============================
+     MOBILE
+  ================================ */
+  
+  @media (max-width: 900px) {
+    .policies {
+      padding: 90px 6vw 110px;
+    }
+  
+    .policies-title {
+      font-size: 2.4rem;
+      margin-bottom: 50px;
+    }
+  
+    .policy-item {
+      margin-bottom: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .policies-title {
+      font-size: 2rem;
+    }
+  
+    .policy-item h2 {
+      font-size: 1.3rem;
+    }
+  
+    .policy-item p {
+      font-size: 0.95rem;
+    }
+  }
+  
